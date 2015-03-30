@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<!--	第一場戰鬥-站前對話-->
+	<!--	基礎定義-->
+	<background id="1001"/>
+	<roleList>
+		<role id="1" head="5001" name="$"/>
+		<role id="2" head="5205" name="關羽"/>
+		<role id="3" head="5211" name="張飛"/>
+		<role id="4" head="5212" name="劉備"/>
+		<role id="5" head="5111" name="暴走張飛"/>
+	</roleList>
+	<!--	數據列表-->
+	<frames totalTime="400" endEvent="hello">
+				<action type="1" startTime="800" act="75" msg="10100121"/>
+			<action type="1" startTime="100" act="50" msg="1037"/>
+			</frames>
+</root>
+

@@ -1,0 +1,1 @@
+遍历当前文件夹，把所有(指定)文件里的简体中文转换为繁体中文`file_ext_name_list` 里指定要替换的文件类型繁简转换函数用到了[https://github.com/skydark/nstools/tree/master/zhtools](https://github.com/skydark/nstools/tree/master/zhtools)里的`langconv`
