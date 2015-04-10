@@ -7,6 +7,7 @@ import subprocess
 import time
 import commands
 import re
+import collections
 
 img_extensions = ['.jpg', '.png']
 tw_resource_dir_name = 'zh_TW'
@@ -84,6 +85,18 @@ def compare_i18n_dir_del(dir_path, i18n_img_files, root_img_files):
         del_file_name = path.join(dir_path, del_file_name)
         # print(del_file_name)
         os.remove(del_file_name)
+
+
+def check_conflict_id():
+    all_swf_name = collections.defaultdict(list)
+    for dir_path, dir_name, files in os.walk(os.getcwd()):
+        for x in files:
+            if path.splitext(x)[1].lower() == '.swf':
+                all_swf_name[x].append(path.join(dir_path, x))
+
+    for k in all_swf_name:
+        if len(all_swf_name[k]) > 1:
+            print(k, all_swf_name[k])
 
 if __name__ == '__main__':
     main()
